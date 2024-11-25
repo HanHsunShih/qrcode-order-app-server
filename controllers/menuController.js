@@ -1,4 +1,4 @@
-import { getAllContents } from "../helpers/db_helpers";
+import { getAllContents } from "../helpers/db_helpers.js";
 
 export const getAllProducts = async (req, res) => {
   try {
