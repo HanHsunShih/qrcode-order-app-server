@@ -2,12 +2,15 @@ import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import menuRoute from "./routes/menuRoute.js";
+import orderRoute from "./routes/orderRoute.js";
 const app = express();
 
 const PORT = process.env.PORT || 5050;
 
 app.use(cors());
 app.use("/api/menu", menuRoute);
+app.use("/api/order", orderRoute);
+app.use(express.json());
 
 // basic home route
 app.get("/", (req, res) => {
