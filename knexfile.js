@@ -10,4 +10,30 @@ export default {
     password: process.env.DB_PASSWORD,
     charset: "utf8",
   },
+
+  postProcessResponse: (result) => {
+    if (Array.isArray(result)) {
+      return result.map(processDecimals);
+    }
+
+    return processDecimals(result);
+  },
+};
+
+const processDecimals = (row) => {
+  if (!row || typeof row !== "object") return row;
+
+  for (const key in row) {
+    if (
+      row[key] &&
+      row[key].constructor &&
+      row[key].constructor.name === "String"
+    ) {
+      if (!isNaN(row[key])) {
+        row[key] = parseFloat(row[key]);
+      }
+    }
+  }
+
+  return row;
 };

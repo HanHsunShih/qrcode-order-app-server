@@ -20,4 +20,14 @@ export const getItemWithId = async (tableName, productId) => {
   }
 };
 
-// export const
+export const addNewRow = async (tableName, body) => {
+  try {
+    const newOrderIds = await knex(tableName).insert(body);
+    const newOrder = await knex(tableName)
+      .where({ id: newOrderIds[0] })
+      .first();
+    return newOrder;
+  } catch (error) {
+    throw new Error("Error creating new order row, error : " + error);
+  }
+};

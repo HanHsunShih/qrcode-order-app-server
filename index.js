@@ -8,11 +8,10 @@ const app = express();
 const PORT = process.env.PORT || 5050;
 
 app.use(cors());
+app.use(express.json());
 app.use("/api/menu", menuRoute);
 app.use("/api/order", orderRoute);
-app.use(express.json());
 
-// basic home route
 app.get("/", (req, res) => {
   res.send("Welcome to my API");
 });
