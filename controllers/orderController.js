@@ -2,6 +2,7 @@ import {
   getAllContents,
   getItemWithId,
   addNewRow,
+  getOrdersAndProducts,
 } from "../helpers/db_helpers.js";
 
 import initKnex from "knex";
@@ -17,6 +18,22 @@ export const getAllOrders = async (req, res) => {
       : res.status(404).json({ message: "Products not found" });
   } catch (error) {
     res.status(500).json(`Error retrieving Products: ${error}`);
+  }
+};
+
+export const getOrdersWithProducts = async (req, res) => {
+  try {
+    const ordersAndProducts = await getOrdersAndProducts();
+
+    if (!ordersAndProducts) {
+      res
+        .status(404)
+        .json({ message: "orders and products not found" + error });
+    }
+
+    res.status(200).json(ordersAndProducts);
+  } catch (error) {
+    res.status(500).json(`Error getting orders and products: ${error}`);
   }
 };
 

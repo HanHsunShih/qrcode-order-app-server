@@ -31,3 +31,22 @@ export const addNewRow = async (tableName, body) => {
     throw new Error("Error creating new order row, error : " + error);
   }
 };
+
+export const getOrdersAndProducts = async (tableName) => {
+  try {
+    const ordersAndProducts = await knex("order")
+      .join("order_product", "ORDER.id", "=", "order_product.order_id")
+      .join("product", "order_product.product_id", "=", "product.id")
+      .select(
+        "order.table_number",
+        "order.status",
+        "order_product.order_id",
+        "order_product.product_id",
+        "product.product_name"
+      );
+
+    return ordersAndProducts;
+  } catch (error) {
+    throw new Error("Error getting orders and products:" + error);
+  }
+};
