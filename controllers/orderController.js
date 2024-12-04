@@ -62,21 +62,24 @@ export const addOrder = async (req, res) => {
     });
   }
   try {
-    const newOrder = await knex("order").insert({
+    const newOrderId = await knex("order").insert({
       table_number: req.body.table_number,
       status: "Processing",
     });
 
     req.body.products.forEach(async (product) => {
-      const newOrderedProduct = await knex("product").where({ id: product.id });
+      const newOrderedProduct = await knex("product")
+        .where({ id: product.id })
+        .first();
       const order_product = await knex("order_product").insert({
-        order_id: newOrder[0], //🍄
-        product_id: newOrderedProduct[0].id, //🍄
+        order_id: newOrderId[0], //🍄
+        product_id: newOrderedProduct.id,
+        quantity: product.quantity,
       });
     });
 
-    newOrder
-      ? res.status(201).json(newOrder)
+    newOrderId
+      ? res.status(201).json(newOrderId)
       : res
           .status(500)
           .json({ message: `Error writing to database: ${error}` });
@@ -84,10 +87,3 @@ export const addOrder = async (req, res) => {
     res.status(500).json({ message: `Error writing to database: ${error}` });
   }
 };
-
-// addOrder
-// get req.body
-// validation - check table number, products exist (res.status)✅
-// knex insert into order table - hardcode status to "Processing"✅
-// knox insert into order_product✅
-// send JSON response✅
