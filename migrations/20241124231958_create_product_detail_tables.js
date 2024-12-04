@@ -45,6 +45,7 @@ export function up(knex) {
         .references("id")
         .inTable("product")
         .onDelete("CASCADE"); // Foreign key to products table
+      table.integer("quantity").unsigned().notNullable();
     });
 }
 
@@ -54,7 +55,7 @@ export function up(knex) {
  */
 export function down(knex) {
   return knex.schema
-    .dropTable("products")
-    .dropTable("orders")
-    .dropTable("order_items");
+    .dropTable("order_product")
+    .dropTable("product")
+    .dropTable("order");
 }
