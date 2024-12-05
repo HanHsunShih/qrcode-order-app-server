@@ -2,7 +2,8 @@ import {
   getAllContents,
   getItemWithId,
   addNewRow,
-  getOrdersAndProducts,
+  getProcessingOrdersAndProducts,
+  getCompletedOrdersAndProducts,
 } from "../helpers/db_helpers.js";
 
 import initKnex from "knex";
@@ -21,14 +22,29 @@ export const getAllOrders = async (req, res) => {
   }
 };
 
-export const getOrdersWithProducts = async (req, res) => {
+export const getCompletedOrderWithProducts = async (req, res) => {
   try {
-    const ordersAndProducts = await getOrdersAndProducts();
+    const completedOrdersAndProducts = await getCompletedOrdersAndProducts();
+
+    if (!completedOrdersAndProducts) {
+      res
+        .status(404)
+        .json({ message: "completed orders and products not found" + error });
+    }
+    res.status(200).json(completedOrdersAndProducts);
+  } catch (error) {
+    res.stats(500).json(`Error getting orders and products: ${error}`);
+  }
+};
+
+export const getProcessingOrdersWithProducts = async (req, res) => {
+  try {
+    const ordersAndProducts = await getProcessingOrdersAndProducts();
 
     if (!ordersAndProducts) {
       res
         .status(404)
-        .json({ message: "orders and products not found" + error });
+        .json({ message: "processing orders and products not found" + error });
     }
 
     res.status(200).json(ordersAndProducts);
@@ -85,5 +101,26 @@ export const addOrder = async (req, res) => {
           .json({ message: `Error writing to database: ${error}` });
   } catch (error) {
     res.status(500).json({ message: `Error writing to database: ${error}` });
+  }
+};
+
+export const changeStatus = async (req, res) => {
+  try {
+    console.log("req.body = ");
+    console.log(req.body);
+
+    const updatedStatus = await knex("order")
+      .where({ id: req.body.order_id })
+      .update({ status: "Completed" });
+
+    if (updatedStatus === 0) {
+      res
+        .status(404)
+        .json({ message: `error changing status, error: ${error}` });
+    }
+
+    res.status(201).json(updatedStatus);
+  } catch (error) {
+    res.status(500).json({ message: `Error changing status, error: ${error}` });
   }
 };
