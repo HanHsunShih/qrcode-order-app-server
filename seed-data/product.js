@@ -8,6 +8,7 @@ export default [
     description:
       "Special Blend, Light-Medium Roast, Berries, Blackcurrant, White Flower",
     options: "Iced, Hot",
+    image: "",
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ export default [
     description:
       "Special Blend, Medium-Dark Roast, Nuts, Butter, Dark Chocolate, Toffee",
     options: "Iced, Hot",
+    image: "",
   },
   {
     id: 3,
@@ -28,6 +30,7 @@ export default [
     description:
       "Natural Process, Light Roast, Orange, Melon, Sweet Berry, Plum, Brown Sugar, Vanilla, Butter",
     options: "Iced, Hot",
+    image: "",
   },
   {
     id: 4,
@@ -38,6 +41,7 @@ export default [
     description:
       "Washed Process, Light-Medium Roast, Brown Sugar, Butter, Citrus, Roasted Walnut, Chocolate",
     options: "Iced, Hot",
+    image: "",
   },
   {
     id: 5,
@@ -47,6 +51,7 @@ export default [
     price_gbp: 4.9,
     description: "Washed Process, Medium Roast, Nuts, Butter, Honey, Licorice",
     options: "Iced, Hot",
+    image: "",
   },
   {
     id: 6,
@@ -57,6 +62,7 @@ export default [
     description:
       "Special Blend, Medium-Dark Roast, Nuts, Butter, Dark Chocolate, Toffee",
     options: "Iced, Hot",
+    image: "Cold Brew Coffee.jpg",
   },
   {
     id: 7,
@@ -66,6 +72,7 @@ export default [
     price_gbp: 3.4,
     description: "",
     options: "Iced, Hot",
+    image: "",
   },
   {
     id: 8,
@@ -75,6 +82,7 @@ export default [
     price_gbp: 3.7,
     description: "",
     options: "Iced",
+    image: "",
   },
   {
     id: 9,
@@ -84,6 +92,7 @@ export default [
     price_gbp: 4.2,
     description: "",
     options: "Iced",
+    image: "",
   },
   {
     id: 10,
@@ -93,6 +102,7 @@ export default [
     price_gbp: 4.2,
     description: "",
     options: "Iced",
+    image: "",
   },
   {
     id: 11,
@@ -102,6 +112,7 @@ export default [
     price_gbp: 3.9,
     description: "",
     options: "Iced",
+    image: "",
   },
   {
     id: 12,
@@ -111,6 +122,7 @@ export default [
     price_gbp: 3.9,
     description: "",
     options: "Hot",
+    image: "",
   },
   {
     id: 13,
@@ -120,6 +132,7 @@ export default [
     price_gbp: 3.9,
     description: "",
     options: "Iced, Hot",
+    image: "",
   },
   {
     id: 14,
@@ -129,6 +142,7 @@ export default [
     price_gbp: 4.2,
     description: "",
     options: "Iced",
+    image: "",
   },
   {
     id: 15,
@@ -138,6 +152,7 @@ export default [
     price_gbp: 4.2,
     description: "",
     options: "Iced, Hot",
+    image: "",
   },
   {
     id: 16,
@@ -147,6 +162,7 @@ export default [
     price_gbp: 4.2,
     description: "",
     options: "Iced, Hot",
+    image: "Mocha Coffee Latte.jpg",
   },
   {
     id: 17,
@@ -156,6 +172,7 @@ export default [
     price_gbp: 4.4,
     description: "",
     options: "Iced, Hot",
+    image: "",
   },
   {
     id: 18,
@@ -165,6 +182,7 @@ export default [
     price_gbp: 4.4,
     description: "",
     options: "Iced, Hot",
+    image: "",
   },
   {
     id: 19,
@@ -174,6 +192,7 @@ export default [
     price_gbp: 4.4,
     description: "",
     options: "Iced, Hot",
+    image: "",
   },
   {
     id: 20,
@@ -183,6 +202,7 @@ export default [
     price_gbp: 4.4,
     description: "",
     options: "Iced, Hot",
+    image: "",
   },
   {
     id: 21,
@@ -192,6 +212,7 @@ export default [
     price_gbp: 3.7,
     description: "",
     options: "Iced, Hot",
+    image: "",
   },
   {
     id: 22,
@@ -201,6 +222,7 @@ export default [
     price_gbp: 4.2,
     description: "",
     options: "Iced, Hot",
+    image: "",
   },
   {
     id: 23,
@@ -210,6 +232,7 @@ export default [
     price_gbp: 4.4,
     description: "",
     options: "Iced, Hot",
+    image: "",
   },
   {
     id: 24,
@@ -219,6 +242,7 @@ export default [
     price_gbp: 4.4,
     description: "",
     options: "Iced, Hot",
+    image: "",
   },
   {
     id: 25,
@@ -228,6 +252,7 @@ export default [
     price_gbp: 4.2,
     description: "",
     options: "Iced, Hot",
+    image: "",
   },
   {
     id: 26,
@@ -237,6 +262,7 @@ export default [
     price_gbp: 4.2,
     description: "",
     options: "Iced, Hot",
+    image: "Chocolate Milk.jpg",
   },
   {
     id: 27,
@@ -246,6 +272,7 @@ export default [
     price_gbp: 4.2,
     description: "",
     options: "Iced, Hot",
+    image: "",
   },
   {
     id: 28,
@@ -255,6 +282,7 @@ export default [
     price_gbp: 3.9,
     description: "",
     options: "Iced",
+    image: "",
   },
   {
     id: 29,
@@ -264,6 +292,7 @@ export default [
     price_gbp: 3.9,
     description: "",
     options: "Iced",
+    image: "",
   },
   {
     id: 30,
@@ -273,6 +302,7 @@ export default [
     price_gbp: 3.9,
     description: "",
     options: "Iced",
+    image: "",
   },
   {
     id: 31,
@@ -282,6 +312,7 @@ export default [
     price_gbp: 3.9,
     description: "",
     options: "Iced",
+    image: "",
   },
   {
     id: 32,
@@ -291,6 +322,7 @@ export default [
     price_gbp: 3.9,
     description: "",
     options: "Iced",
+    image: "",
   },
   {
     id: 33,
@@ -300,6 +332,7 @@ export default [
     price_gbp: 3.9,
     description: "",
     options: "Iced",
+    image: "",
   },
   {
     id: 34,
@@ -309,6 +342,7 @@ export default [
     price_gbp: 3.9,
     description: "",
     options: "Iced",
+    image: "",
   },
   {
     id: 35,
@@ -318,6 +352,7 @@ export default [
     price_gbp: 3.9,
     description: "",
     options: "Iced",
+    image: "",
   },
   {
     id: 36,
@@ -327,6 +362,7 @@ export default [
     price_gbp: 3.9,
     description: "Semi-fermented / Rich floral aroma, Lychee fruit aroma",
     options: "Iced, Hot",
+    image: "",
   },
   {
     id: 37,
@@ -336,6 +372,7 @@ export default [
     price_gbp: 3.9,
     description: "Semi-fermented / Pomelo, Wild ginger, Jasmine floral aroma",
     options: "Iced, Hot",
+    image: "",
   },
   {
     id: 38,
@@ -346,6 +383,7 @@ export default [
     description:
       "Lightly fermented / Deep aroma of Oolong tea, Fresh scent of high mountain tea, Full of fruity aroma",
     options: "",
+    image: "",
   },
   {
     id: 39,
@@ -355,6 +393,7 @@ export default [
     price_gbp: 4.2,
     description: "Heavily fermented / Ripe fruit aroma",
     options: "",
+    image: "",
   },
   {
     id: 40,
@@ -365,6 +404,7 @@ export default [
     description:
       "Semi-fermented / Light roast cane sugar sweetness, Gardenia jasmine aroma",
     options: "",
+    image: "",
   },
   {
     id: 41,
@@ -374,6 +414,7 @@ export default [
     price_gbp: 3.9,
     description: "Fully fermented / Malt aroma, Milk candy sweetness",
     options: "Iced, Hot",
+    image: "Sun Moon Lake Assam Red Tea No.8.jpg",
   },
   {
     id: 42,
@@ -383,6 +424,7 @@ export default [
     price_gbp: 4.4,
     description: "",
     options: "Iced",
+    image: "",
   },
   {
     id: 43,
@@ -392,6 +434,7 @@ export default [
     price_gbp: 4.4,
     description: "",
     options: "Iced",
+    image: "",
   },
   {
     id: 44,
@@ -401,6 +444,7 @@ export default [
     price_gbp: 4.4,
     description: "",
     options: "Iced",
+    image: "Kiwi Banana Yogurt Drink.jpg",
   },
   {
     id: 45,
@@ -410,6 +454,7 @@ export default [
     price_gbp: 3.9,
     description: "",
     options: "Iced, Hot",
+    image: "",
   },
   {
     id: 46,
@@ -419,6 +464,7 @@ export default [
     price_gbp: 3.9,
     description: "",
     options: "Iced, Hot",
+    image: "",
   },
   {
     id: 47,
@@ -428,6 +474,7 @@ export default [
     price_gbp: 3.4,
     description: "",
     options: "Iced",
+    image: "",
   },
   {
     id: 48,
@@ -437,6 +484,7 @@ export default [
     price_gbp: 3.4,
     description: "",
     options: "Iced",
+    image: "",
   },
   {
     id: 49,
@@ -446,6 +494,7 @@ export default [
     price_gbp: 6.1,
     description: "",
     options: "No alcohol -£1, Extra alcohol +£1",
+    image: "",
   },
   {
     id: 50,
@@ -455,6 +504,7 @@ export default [
     price_gbp: 6.1,
     description: "",
     options: "No alcohol -£1, Extra alcohol +£1",
+    image: "",
   },
   {
     id: 51,
@@ -464,6 +514,7 @@ export default [
     price_gbp: 6.1,
     description: "",
     options: "No alcohol -£1, Extra alcohol +£1",
+    image: "",
   },
   {
     id: 52,
@@ -473,6 +524,7 @@ export default [
     price_gbp: 6.1,
     description: "",
     options: "No alcohol -£1, Extra alcohol +£1",
+    image: "",
   },
   {
     id: 53,
@@ -482,6 +534,7 @@ export default [
     price_gbp: 6.1,
     description: "",
     options: "No alcohol -£1, Extra alcohol +£1",
+    image: "",
   },
   {
     id: 54,
@@ -491,6 +544,7 @@ export default [
     price_gbp: 3.4,
     description: "",
     options: "",
+    image: "Basque Cheesecake.jpg",
   },
   {
     id: 55,
@@ -500,6 +554,7 @@ export default [
     price_gbp: 3.7,
     description: "",
     options: "",
+    image: "",
   },
   {
     id: 56,
@@ -509,6 +564,7 @@ export default [
     price_gbp: 2.4,
     description: "",
     options: "",
+    image: "Matcha Scone.jpg",
   },
   {
     id: 57,
@@ -518,6 +574,7 @@ export default [
     price_gbp: 2.4,
     description: "",
     options: "",
+    image: "Plain Scone.jpg",
   },
   {
     id: 58,
@@ -527,6 +584,7 @@ export default [
     price_gbp: 2.4,
     description: "",
     options: "",
+    image: "Earl Grey Pound Cake",
   },
   {
     id: 59,
@@ -536,6 +594,7 @@ export default [
     price_gbp: 2.4,
     description: "",
     options: "",
+    image: "Nutty Chocolate Soft Cookie.jpg",
   },
   {
     id: 60,
@@ -545,6 +604,7 @@ export default [
     price_gbp: 6.4,
     description: "Sausage, Curry, Onion, Carrot, Poached Egg, Eastern Rice",
     options: "Mild spicy, Medium spicy",
+    image: "",
   },
   {
     id: 61,
@@ -555,6 +615,7 @@ export default [
     description:
       "Seasonal Vegetables, Sausage, Wild Mushrooms, Curry, Onion, Carrot, Poached Egg, Eastern Rice",
     options: "Mild spicy, Medium spicy",
+    image: "Vegetable Sausage Curry Rice.jpg",
   },
   {
     id: 62,
@@ -565,6 +626,7 @@ export default [
     description:
       "Seasonal Vegetables, Wild Mushrooms, Curry, Onion, Carrot, Poached Egg, Eastern Rice",
     options: "Mild spicy, Medium spicy",
+    image: "",
   },
   {
     id: 63,
@@ -575,6 +637,7 @@ export default [
     description:
       "Tomato, Harissa Sauce, Bell Pepper, Onion, Poached Egg, French Bread",
     options: "Medium spicy!",
+    image: "Shakshuka.jpg",
   },
   {
     id: 64,
@@ -585,6 +648,7 @@ export default [
     description:
       "White Shrimp, Fresh Lettuce, Seasonal Vegetables, Sweet Potato, Apple, Sun-dried Tomato, Vinaigrette",
     options: "",
+    image: "Shrimp Apple Warm Salad.jpg",
   },
   {
     id: 65,
@@ -595,6 +659,7 @@ export default [
     description:
       "Sesame Oil, Seaweed Crisp, White Shrimp, Furikake, Mentaiko Sauce, Fresh Lettuce, Sun-dried Tomato",
     options: "",
+    image: "Shrimp Rice Ball with Mentaiko.jpg",
   },
   {
     id: 66,
@@ -605,6 +670,7 @@ export default [
     description:
       "White Shrimp, Pear Chutney, Scrambled Eggs, Fresh Lettuce, Sun-dried Tomato, Vinaigrette, Sourdough Bread",
     options: "",
+    image: "Shrimp Avocado Open-faced Sandwich.jpg",
   },
   {
     id: 67,
@@ -615,6 +681,7 @@ export default [
     description:
       "Wild Mushrooms, Poached Egg, Italian Cheese Sauce, Fresh Lettuce, Sun-dried Tomato, Vinaigrette, Sourdough Bread",
     options: "",
+    image: "Mushroom Poached Egg Open-faced Sandwich.jpg",
   },
   {
     id: 68,
@@ -624,6 +691,7 @@ export default [
     price_gbp: 2,
     description: "",
     options: "",
+    image: "",
   },
   {
     id: 69,
@@ -633,6 +701,7 @@ export default [
     price_gbp: 0.5,
     description: "",
     options: "",
+    image: "",
   },
   {
     id: 70,
@@ -642,6 +711,7 @@ export default [
     price_gbp: 0.5,
     description: "",
     options: "",
+    image: "",
   },
   {
     id: 71,
@@ -651,6 +721,7 @@ export default [
     price_gbp: 0.5,
     description: "",
     options: "",
+    image: "",
   },
   {
     id: 72,
@@ -660,6 +731,7 @@ export default [
     price_gbp: 4.4,
     description: "Yogurt, Banana, Strawberry Jam, Crunchy Granola, Nuts",
     options: "",
+    image: "",
   },
   {
     id: 73,
@@ -669,6 +741,7 @@ export default [
     price_gbp: 4.4,
     description: "Yogurt, Kiwi, Mango Sauce, Crunchy Granola, Nuts",
     options: "",
+    image: "Mango Kiwi Yogurt Bowl.jpg",
   },
   {
     id: 74,
@@ -678,7 +751,8 @@ export default [
     price_gbp: 6.1,
     description:
       "Peanut Butter, Banana, Nuts, Fresh Lettuce, Sun-dried Tomato, Vinaigrette, Sourdough Bread, Yogurt",
-    options: "",
+    options: "Chocolate Banana Open-faced Sandwich.jpg",
+    image: "",
   },
   {
     id: 75,
@@ -689,6 +763,7 @@ export default [
     description:
       "Peanut Butter, Banana, Nuts, Fresh Lettuce, Sun-dried Tomato, Vinaigrette, Sourdough Bread, Yogurt",
     options: "",
+    image: "",
   },
   {
     id: 76,
@@ -699,5 +774,6 @@ export default [
     description:
       "Italian Cheese Sauce, Apple, Honey, Nuts, Fresh Lettuce, Sun-dried Tomato, Vinaigrette, Sourdough Bread, Yogurt",
     options: "",
+    image: "",
   },
 ];
