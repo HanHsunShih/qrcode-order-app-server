@@ -41,18 +41,21 @@ export const getProcessingOrdersAndProducts = async () => {
       .select(
         "order.table_number",
         "order.status",
+        "order.created_at",
         "order_product.order_id",
         "order_product.product_id",
         "product.product_name",
         "order_product.quantity"
       );
 
+    console.log("ordersAndProducts = ");
+    console.log(ordersAndProducts);
+
     const groupByOrder = Object.groupBy(ordersAndProducts, (order) => {
       return order.order_id;
     });
 
     const groupByOrderArray = Object.entries(groupByOrder);
-    console.log(groupByOrderArray);
 
     return groupByOrderArray;
   } catch (error) {
@@ -69,6 +72,7 @@ export const getCompletedOrdersAndProducts = async () => {
       .select(
         "order.table_number",
         "order.status",
+        "order.created_at",
         "order_product.order_id",
         "order_product.product_id",
         "product.product_name",
