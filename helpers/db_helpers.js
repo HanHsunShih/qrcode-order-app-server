@@ -48,9 +48,6 @@ export const getProcessingOrdersAndProducts = async () => {
         "order_product.quantity"
       );
 
-    console.log("ordersAndProducts = ");
-    console.log(ordersAndProducts);
-
     const groupByOrder = Object.groupBy(ordersAndProducts, (order) => {
       return order.order_id;
     });

@@ -3,18 +3,19 @@ import {
   getAllOrders,
   getOrderById,
   addOrder,
-  getProcessingOrdersWithProducts,
-  getCompletedOrderWithProducts,
+  getProcessingOrders,
+  getCompletedOrders,
   changeStatus,
 } from "../controllers/orderController.js";
+import authorise from "../middleware/auth.js";
 
 const router = express.Router();
 
 // router.get("/", getAllOrders);
 // router.get("/:order_id", getOrderById);
+router.get("/", authorise, getProcessingOrders);
+router.get("/history", getCompletedOrders);
 router.post("/", addOrder);
-router.get("/", getProcessingOrdersWithProducts);
 router.put("/", changeStatus);
-router.get("/history", getCompletedOrderWithProducts);
 
 export default router;

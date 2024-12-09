@@ -7,6 +7,7 @@ const router = express.Router();
 
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt"; // A library to hash passwords before storing in DB
+import authorise from "../middleware/auth.js";
 
 // import authorise from "../middleware/auth.js";
 
@@ -70,5 +71,19 @@ router.post("/login", async (req, res) => {
     res.status(400).json({ message: "User not found" });
   }
 });
+
+// router.get("/orders", authorise, async (req, res) => {
+//   try {
+//     // Query the database for the user by comparing the ID in the JWT token against the ID of the user
+//     const user = await knex("users").where({ id: req.token.id }).first();
+
+//     // Remove user password before sending it to client side (via the `delete` operator)
+//     delete user.password;
+
+//     res.json(user);
+//   } catch (error) {
+//     res.status(500).json({ message: "Can't fetch user profile" });
+//   }
+// });
 
 export default router;

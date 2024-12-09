@@ -1,7 +1,6 @@
 import {
   getAllContents,
   getItemWithId,
-  addNewRow,
   getProcessingOrdersAndProducts,
   getCompletedOrdersAndProducts,
 } from "../helpers/db_helpers.js";
@@ -11,18 +10,35 @@ import configuration from "../knexfile.js";
 
 const knex = initKnex(configuration);
 
-export const getAllOrders = async (req, res) => {
+export const getProcessingOrders = async (req, res) => {
   try {
-    const allOrders = await getAllContents("order");
-    allOrders.length
-      ? res.status(200).json(allOrders)
-      : res.status(404).json({ message: "Products not found" });
+    const user = await knex("users").where({ id: req.token.id }).first();
+
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    const ordersAndProducts = await getProcessingOrdersAndProducts();
+    // res.json(user);
+
+    if (!ordersAndProducts) {
+      res
+        .status(404)
+        .json({ message: "processing orders and products not found" + error });
+    }
+    delete user.password;
+
+    res.status(200).json(ordersAndProducts);
   } catch (error) {
-    res.status(500).json(`Error retrieving Products: ${error}`);
+    res
+      .status(500)
+      .json(
+        `Error getting processing orders, might failed fetching user profile: ${error}`
+      );
   }
 };
 
-export const getCompletedOrderWithProducts = async (req, res) => {
+export const getCompletedOrders = async (req, res) => {
   try {
     const completedOrdersAndProducts = await getCompletedOrdersAndProducts();
 
@@ -34,39 +50,6 @@ export const getCompletedOrderWithProducts = async (req, res) => {
     res.status(200).json(completedOrdersAndProducts);
   } catch (error) {
     res.stats(500).json(`Error getting orders and products: ${error}`);
-  }
-};
-
-export const getProcessingOrdersWithProducts = async (req, res) => {
-  try {
-    const ordersAndProducts = await getProcessingOrdersAndProducts();
-
-    if (!ordersAndProducts) {
-      res
-        .status(404)
-        .json({ message: "processing orders and products not found" + error });
-    }
-
-    res.status(200).json(ordersAndProducts);
-  } catch (error) {
-    res.status(500).json(`Error getting orders and products: ${error}`);
-  }
-};
-
-export const getOrderById = async (req, res) => {
-  const orderId = req.params.order_id;
-  try {
-    const order = await getItemWithId("order", orderId);
-
-    if (!order) {
-      res
-        .status(404)
-        .json({ message: `Could not found order with Id: ${orderId}` });
-    }
-
-    res.json(order);
-  } catch (error) {
-    res.status(500).json({ message: `Error fetching from database` + error });
   }
 };
 
@@ -122,5 +105,33 @@ export const changeStatus = async (req, res) => {
     res.status(201).json(updatedStatus);
   } catch (error) {
     res.status(500).json({ message: `Error changing status, error: ${error}` });
+  }
+};
+
+export const getAllOrders = async (req, res) => {
+  try {
+    const allOrders = await getAllContents("order");
+    allOrders.length
+      ? res.status(200).json(allOrders)
+      : res.status(404).json({ message: "Products not found" });
+  } catch (error) {
+    res.status(500).json(`Error retrieving Products: ${error}`);
+  }
+};
+
+export const getOrderById = async (req, res) => {
+  const orderId = req.params.order_id;
+  try {
+    const order = await getItemWithId("order", orderId);
+
+    if (!order) {
+      res
+        .status(404)
+        .json({ message: `Could not found order with Id: ${orderId}` });
+    }
+
+    res.json(order);
+  } catch (error) {
+    res.status(500).json({ message: `Error fetching from database` + error });
   }
 };
