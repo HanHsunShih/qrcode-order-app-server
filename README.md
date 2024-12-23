@@ -1,5 +1,4 @@
-# About the project
-
+# Online order System for my sister's cafe shop☕️
 
 ### Live Demo 🏄🏻‍♀️
 Check out the live demo: [QR Code Order Application](https://seaward-migration-plan.netlify.app/)</br>
@@ -7,6 +6,7 @@ Check out the live demo: [QR Code Order Application](https://seaward-migration-p
 ### Backend 🏄
 Check out the backend README: [backend README](https://github.com/HanHsunShih/qrcode-order-app-server)
 
+# About this Project
 This QR code ordering app is built for my sister's cafe in Taiwan, allowing customers to order online. The client side handles menu display and ordering, while the admin dashboard, with login access, lets authorized users view orders and history.
 
 client-side|admin-side
