@@ -12,6 +12,16 @@ client-side|admin-side
 
 <img src="https://github.com/HanHsunShih/qrcode-order-app-client/blob/main/images/Capstone%20one%20page%20slide.JPG?raw=true" width="650">
 
+# Features 🤿
+### Customer Interface:
+- Browse the menu and place orders.
+- Add meals to or remove them from the cart.
+- Navigate through tabs with scroll synchronization.
+
+### Admin Dashboard:
+- View all pending orders.
+- Mark orders as "complete" to save them to the order history.
+
 # Built With:
 <p align="left">
   <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> 
@@ -25,8 +35,26 @@ client-side|admin-side
   <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> 
 </p>
 
-Get Started
-Prerequisites, Installation
+# Getting Started 🤩
+## Prerequisities
+- Node.js
+- MySQL
+
+## Installation
+- clone the repo
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Usage
 
