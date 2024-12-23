@@ -38,6 +38,22 @@ client-side|admin-side
   <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> 
 </p>
 
+# Data Schema:
+- `menu` table: Stores cafe menu data
+- `order` table: Stores table number and status ( default to Processing )
+- `order_product`: Acts as an intermediate table to manage the many-to-many relationship between orders and product tables.
+
+# APIs 
+GET /menu: Fetch the menu details.</br>
+GET /menu/:id : Fetch the meal details.</br>
+POST /order: Submit a customer's order.</br>
+POST /users/register: Register as an admin.</br>
+POST /users/login: Login as an admin.</br>
+GET /order: View all processing orders as an admin.</br>
+PUT /order: Change order status from processing to completed.</br>
+GET /order/history: View all completed orders as an admin.</br>
+
+
 # Getting Started 🤩
 ## Prerequisities
 - Node.js
@@ -45,21 +61,44 @@ client-side|admin-side
 
 ## Installation
 - clone the repo
+  ```
+  git clone https://github.com:HanHsunShih/qrcode-order-app-server.git
+  ```
+- Install dependencies:
+```
+npm install
+```
+- Configure the `.env` file:
+```
+DB_HOST=
+DB_NAME=
+DB_USER=
+DB_PASSWORD=
+JWT_SECRET=
+```
+to create a JWT_SECRET: 
+Created via Node JS by running `node` and then `const crypto = require('crypto');` then `crypto.randomBytes(64).toString("hex")` in the terminal, 
+after you got the JWT_SECRET, run `.exit` to exit Node environment.
 
 
+- Start the server:
+```
+npm run start
+```
 
+# Usage ☕️
 
+1. **For Customers:**
+   - Scan the QR code provided by the cafe.
+   - Browse the menu and add items to your cart.
+   - Proceed to checkout and place your order.
 
-
-
-
-
-
-
-
-
-
-Usage
-
-Roadmap
-
+2. **For Admins:**
+   - Log in to the admin dashboard with your credentials.
+   - View live customer orders and their details.
+   - Access the order history for management purposes.
+  
+# Roadmap 🚀
+- [ ] Add a Chinese version for Taiwanese users.
+- [ ] Integrate a payments API for seamless online transactions.
+- [ ] Implement a feature to allow real-time menu updates.
