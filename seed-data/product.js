@@ -584,7 +584,7 @@ export default [
     price_gbp: 2.4,
     description: "",
     options: "",
-    image: "Earl Grey Pound Cake",
+    image: "Earl Grey Pound Cake.jpg",
   },
   {
     id: 59,
