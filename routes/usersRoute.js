@@ -72,18 +72,4 @@ router.post("/login", async (req, res) => {
   }
 });
 
-// router.get("/orders", authorise, async (req, res) => {
-//   try {
-//     // Query the database for the user by comparing the ID in the JWT token against the ID of the user
-//     const user = await knex("users").where({ id: req.token.id }).first();
-
-//     // Remove user password before sending it to client side (via the `delete` operator)
-//     delete user.password;
-
-//     res.json(user);
-//   } catch (error) {
-//     res.status(500).json({ message: "Can't fetch user profile" });
-//   }
-// });
-
 export default router;

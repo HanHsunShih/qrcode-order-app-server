@@ -1,6 +1,7 @@
 import "dotenv/config";
 import express from "express";
 import cors from "cors";
+import morgan from "morgan";
 import menuRoute from "./routes/menuRoute.js";
 import orderRoute from "./routes/orderRoute.js";
 import userRoute from "./routes/usersRoute.js";
@@ -12,6 +13,11 @@ dotenv.config();
 const PORT = process.env.PORT || 8081;
 
 app.use(express.static("public"));
+app.use(
+  morgan(
+    ":method :url :status :res[content-length] - :response-time ms :date[web]"
+  )
+);
 
 app.use(cors());
 app.use(express.json());

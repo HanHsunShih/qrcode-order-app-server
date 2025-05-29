@@ -45,6 +45,7 @@ export const getProcessingOrdersAndProducts = async () => {
         "order_product.order_id",
         "order_product.product_id",
         "product.product_name",
+        "product.product_name_ch",
         "order_product.quantity"
       );
 
@@ -73,6 +74,7 @@ export const getCompletedOrdersAndProducts = async () => {
         "order_product.order_id",
         "order_product.product_id",
         "product.product_name",
+        "product.product_name_ch",
         "order_product.quantity"
       );
 

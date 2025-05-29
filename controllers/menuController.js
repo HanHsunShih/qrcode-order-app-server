@@ -27,3 +27,8 @@ export const getProductById = async (req, res) => {
     res.status(500).json({ message: `Error fetching from database` + error });
   }
 };
+
+export const getAllProductsCh = async (req, res) => {
+  try {
+  } catch {}
+};
